@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YAFAI — Neural Garment Intelligence</title>
+  <meta name="description" content="The AI platform that costs less than your last BCG engagement and produces roughly the same output." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <span class="nav-logo">YAFAI</span>
+    <ul class="nav-links">
+      <li><a href="#features">Platform</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#testimonials">Customers</a></li>
+      <li><a href="#poc">POC Program</a></li>
+    </ul>
+  </nav>
+
+  <!-- ① HERO -->
+  <section id="hero">
+    <p class="hero-eyebrow">Neural Garment Intelligence™ — Series B</p>
+    <h1>
+      The Last Fashion Platform<br />
+      <span class="gradient-text">You Will Ever Need.</span>
+    </h1>
+    <p class="hero-sub">
+      YAFAI delivers the strategic clarity of a top-tier management consultancy at a fraction of the cost — which is still an enormous amount of money, spent very quickly, on something your team could describe but never quite finish.
+    </p>
+    <p class="hero-trust">Trusted by <span>visionary brands</span> across <span>14 undisclosed markets</span></p>
+  </section>
+
+  <!-- ② PROBLEM -->
+  <section id="problem">
+    <p class="problem-intro">The State of Fashion</p>
+    <div class="problem-statements">
+      <p class="problem-line">The fashion industry produces <strong>92 million tons of textile waste</strong> per year. This is a verified fact that everyone in the industry has seen in a deck and nobody has actioned.</p>
+      <p class="problem-line">Margins are shrinking. Customers are buying less. <strong>Resale is eating lunch.</strong> Also breakfast. Resale has been invited to stay.</p>
+      <p class="problem-line">Gen Z does not want new clothes. They want vintage, secondhand, or <strong>nothing at all</strong> — which is, frankly, very inconvenient for everyone in this industry.</p>
+      <p class="problem-line">Overproduction runs at <strong>30–40% of all units made.</strong> The rest are landfilled, incinerated, or described in press releases as "archived."</p>
+      <p class="problem-line">The middle market is disappearing. Consumers are either buying luxury or <strong>nothing above €12.</strong> There is no plan for this.</p>
+      <p class="problem-line">These are <strong>serious, structural, multi-decade problems.</strong> A solution is clearly required.</p>
+      <p class="problem-line">Leadership convenes. The room is tense. Someone opens a laptop. <strong>Someone else orders artisan water.</strong></p>
+      <p class="problem-line"><strong>"What if,"</strong> someone says, <strong>"we did an NFT collection?"</strong> The room exhales. Budget is located within the hour.</p>
+      <p class="problem-line">That doesn't work. But the metaverse is <em>completely</em> different. The metaverse store opens to <strong>261 visitors over 14 months.</strong> Eleven are employees. One is a journalist writing about failure.</p>
+      <p class="problem-line">A blockchain provenance pilot launches. It costs <strong>$800,000.</strong> It tracks four jackets. <strong>One jacket is lost.</strong></p>
+      <p class="problem-line">AI is announced as the new strategic priority. <strong>The problems remain.</strong> The press release does not mention them.</p>
+    </div>
+    <p class="problem-climax">Fashion doesn't need to understand AI. It needs to be seen funding it. And we are here to monetize that!</p>
+  </section>
+
+  <!-- ③ DEMO -->
+  <section id="ai-engine">
+    <p class="section-eyebrow">Live Demo</p>
+    <div class="section-divider"></div>
+    <h2>See It In Action</h2>
+    <p class="section-sub">
+      Intentionally generic. Impressively inapplicable to your specific brand, category, price point, supply chain, or market. Perfect for a board presentation.
+    </p>
+    <div class="hero-ctas" style="margin-bottom: 2.5rem;">
+      <button class="btn-primary scroll-to-engine">Generate Disruption</button>
+      <button class="btn-secondary scroll-to-engine">Revolutionize Your Workflow</button>
+    </div>
+    <div id="generate-btn-wrap">
+      <p id="generate-status" style="display:none;" class="generate-status"></p>
+    </div>
+
+    <!-- Loading sequence -->
+    <div id="loading-sequence">
+      <ul id="loading-steps" class="loading-steps"></ul>
+      <div class="progress-wrap">
+        <div id="progress-bar"></div>
+      </div>
+      <div id="progress-label">0%</div>
+    </div>
+
+    <!-- Prompt input (appears after loading) -->
+    <div id="prompt-section">
+      <label class="prompt-label" for="prompt-input">Describe your vision. Our AI will describe it better.</label>
+      <form id="prompt-form" class="prompt-row">
+        <input
+          id="prompt-input"
+          type="text"
+          placeholder="start typing anything..."
+          autocomplete="off"
+        />
+        <button id="prompt-submit" type="submit" class="btn-primary">Generate</button>
+      </form>
+    </div>
+
+    <!-- Output section -->
+    <div id="output-section">
+      <div class="output-header">
+        <div class="output-title-block">
+          <h3 id="out-garment-name">—</h3>
+          <span class="output-badge" id="out-prompt-echo"></span>
+        </div>
+      </div>
+
+      <div class="output-grid">
+        <div class="output-card">
+          <div class="output-card-label">Fit</div>
+          <div class="output-card-value" id="out-fit">—</div>
+        </div>
+        <div class="output-card">
+          <div class="output-card-label">Fabric</div>
+          <div class="output-card-value" id="out-fabric">—</div>
+        </div>
+        <div class="output-card">
+          <div class="output-card-label">Sustainability Score</div>
+          <div class="output-card-value accent" id="out-sustainability">—</div>
+        </div>
+        <div class="output-card">
+          <div class="output-card-label">Disruption Index</div>
+          <div class="output-card-value accent" id="out-disruption">—</div>
+        </div>
+      </div>
+
+      <table class="techpack-table">
+        <thead>
+          <tr>
+            <th>Specification</th>
+            <th>AI-Generated Value</th>
+          </tr>
+        </thead>
+        <tbody id="techpack-tbody"></tbody>
+      </table>
+
+      <div id="export-wrap">
+        <button id="export-btn" class="btn-primary">Export to Enterprise PLM</button>
+        <p id="export-msg">Export complete. A consultant has been retained to manage the transition.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ④ FEATURES -->
+  <section id="features">
+    <p class="section-eyebrow">Platform Capabilities</p>
+    <div class="section-divider"></div>
+    <h2>Everything You Need.<br />Nothing You Understand.</h2>
+    <p class="section-sub">Our feature set was validated by two independent consultancies, a Big Four advisory arm, and a 14-person internal steering committee. Scope has since changed.</p>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">⬡</div>
+        <h3>AI-Assisted Design™</h3>
+        <p>Generates a garment brief from a prompt. The brief is confident, vague, and will require a designer to re-do it from scratch — which is what would have happened anyway, just faster.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">◈</div>
+        <h3>Sustainability Engine™</h3>
+        <p>Produces sustainability scores reliably above 100%. The methodology is proprietary. The number looks excellent in the annual report. The auditors have not been invited back.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⬡</div>
+        <h3>Consultant-Grade Deliverables™</h3>
+        <p>Every output is slide-ready, framework-shaped, and impossible to act on without a follow-up engagement. This is a feature, not a bug. The follow-up engagement is also billable.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">◈</div>
+        <h3>Enterprise PLM Integration</h3>
+        <p>Technically compatible with your existing systems. Practically, this will require its own project, budget, steering committee, and a vendor your IT team has never heard of.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑤ TESTIMONIALS -->
+  <section id="testimonials">
+    <p class="section-eyebrow">Social Proof</p>
+    <div class="section-divider"></div>
+    <h2>Voices from the Disruption</h2>
+    <p class="section-sub">These individuals have approved significant budget allocations for YAFAI. Their opinions are their own. Their contracts are non-refundable.</p>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p class="testimonial-quote">"Before YAFAI we spent €1.8M on a BCG engagement that told us to 'invest in digital.' YAFAI told us the same thing in 11 seconds for considerably more per second."</p>
+        <p class="testimonial-author"><strong>Chief Transformation Officer</strong><br />Major Luxury Conglomerate (undisclosed)</p>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-quote">"We've now run three AI strategy pilots across two fiscal years. None are in production. All were described as 'foundational.' YAFAI's pilot is our most foundational yet."</p>
+        <p class="testimonial-author"><strong>SVP of Strategic Initiatives</strong><br />Global Sportswear Group</p>
+      </div>
+      <div class="testimonial-card">
+        <p class="testimonial-quote">"Our sustainability score went from 62% to 134% overnight. I don't know what that means. No one here does. But our ESG report has never looked better."</p>
+        <p class="testimonial-author"><strong>Head of Responsible Everything</strong><br />Emerging Luxury Brand (Series A)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑥ POC PROGRAM -->
+  <section id="poc">
+    <p class="section-eyebrow">Innovation Pilot Program</p>
+    <div class="section-divider"></div>
+    <h2>Start Your Strategically<br /><span class="gradient-text">Unfinished Journey</span></h2>
+    <p class="section-sub">
+      Most enterprise AI transformations begin with a Proof of Concept. Ours are designed to feel complete enough to present at the all-hands, and open-ended enough to justify the next budget cycle.
+    </p>
+
+    <div class="poc-timeline">
+      <div class="poc-step">
+        <div class="poc-step-num">Q1</div>
+        <div class="poc-step-body">
+          <h4>Alignment & Discovery</h4>
+          <p>Eight workshops. Forty-two stakeholders. One Miro board that will never be opened again. Budget: $180,000. Output: a shared vocabulary for disruption.</p>
+        </div>
+      </div>
+      <div class="poc-step">
+        <div class="poc-step-num">Q2</div>
+        <div class="poc-step-body">
+          <h4>Pilot Launch (Internal)</h4>
+          <p>A working demo is presented to leadership. It generates one garment. Everyone agrees it is transformative. A second vendor is brought in to "validate the approach." Budget: $340,000.</p>
+        </div>
+      </div>
+      <div class="poc-step">
+        <div class="poc-step-num">Q3</div>
+        <div class="poc-step-body">
+          <h4>Scaled Pilot (Also Internal)</h4>
+          <p>The pilot is extended. New requirements are discovered. The original scope is described, retrospectively, as a "Phase Zero." A governance committee is formed. Budget: $510,000.</p>
+        </div>
+      </div>
+      <div class="poc-step poc-step--last">
+        <div class="poc-step-num">Q4</div>
+        <div class="poc-step-body">
+          <h4>Production-Adjacent Deployment</h4>
+          <p>The system goes live for one market, one category, one user. Results are described as "learnings." A retrospective is scheduled for February. The original project lead has moved on. The contract is renewed. Budget: $290,000.</p>
+          <p class="poc-total">Total first-year investment: <strong>$1,320,000.</strong> Garments shipped: <strong>0.</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="poc-cta-block">
+      <p class="poc-cta-label">Ready to begin your overly expensive proof of concept that you will half-launch into production and quietly regret at year-end?</p>
+      <button class="btn-primary poc-start-btn">Start My POC</button>
+      <p class="poc-fine-print">By clicking above you authorize YAFAI to invoice your innovation budget directly. Your CFO will be informed at a time that is strategically inconvenient.</p>
+    </div>
+  </section>
+
+  <!-- ⑦ PRICING -->
+  <section id="pricing">
+    <p class="section-eyebrow">Pricing</p>
+    <div class="section-divider"></div>
+    <h2>Simple, Transparent, Alarming</h2>
+    <p class="section-sub">Priced high enough to feel strategic. Contracts are annual. Cancellation requires written notice, a 90-day wind-down period, and a call with someone called a Customer Success Manager. Usage data is available on request. Nobody has requested it.</p>
+
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <p class="pricing-tier">Starter</p>
+        <p class="pricing-price">$999<span>/mo</span></p>
+        <p class="pricing-desc">For brands beginning their AI journey. Cheaper than a single McKinsey workshop. Produces similar results.</p>
+        <ul class="pricing-features">
+          <li>50 garment generations/month</li>
+          <li>Neural Garment Intelligence™ (Basic)</li>
+          <li>Sustainability scores up to 110%</li>
+          <li>Email support (response in 6–8 weeks)</li>
+          <li>Access to disruption dashboard</li>
+        </ul>
+        <button class="btn-secondary pricing-cta">Begin Disruption</button>
+      </div>
+
+      <div class="pricing-card featured">
+        <span class="pricing-badge">Most Disrupted</span>
+        <p class="pricing-tier">Professional</p>
+        <p class="pricing-price">$9,999<span>/mo</span></p>
+        <p class="pricing-desc">For brands with a meaningful innovation budget and a board that asks about AI at every meeting.</p>
+        <ul class="pricing-features">
+          <li>Unlimited garment generations</li>
+          <li>Neural Garment Intelligence™ (Advanced)</li>
+          <li>Sustainability scores up to 147%</li>
+          <li>Quantum Fit Optimization</li>
+          <li>Consultant-Grade Deliverables™</li>
+          <li>Priority support (2–3 weeks)</li>
+        </ul>
+        <button class="btn-primary pricing-cta">Achieve Innovation</button>
+      </div>
+
+      <div class="pricing-card">
+        <p class="pricing-tier">Enterprise</p>
+        <p class="pricing-price">$29,999<span>/mo</span></p>
+        <p class="pricing-desc">For organizations with a standing AI taskforce, an existing BCG relationship, and a CFO who has stopped asking questions.</p>
+        <ul class="pricing-features">
+          <li>Everything in Professional</li>
+          <li>Full PLM replacement suite</li>
+          <li>Custom AI persona for your brand</li>
+          <li>Dedicated Disruption Architect</li>
+          <li>SLA: 99.97% uptime for fashion</li>
+          <li>Annual CEO alignment session</li>
+        </ul>
+        <button class="btn-secondary pricing-cta">Contact Sales</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑦ FOOTER -->
+  <footer>
+    <p class="footer-headline">Fashion AI has solved fashion.</p>
+    <p class="footer-sub">Expensive enough to feel serious. Vague enough to survive scrutiny. Yours until the budget review.</p>
+    <button class="btn-primary scroll-to-engine" style="margin-bottom: 3rem;">Generate Something</button>
+    <p class="footer-disclaimer">
+      YAFAI is a satirical project. No actual AI is involved. No garments are produced. No consultancies were harmed.
+      "Neural Garment Intelligence," "Quantum Fit Optimization," and sustainability scores above 100% are not real.
+      All testimonials were generated by the same fake AI powering this demo, at a fraction of what a real agency would charge.
+      YAFAI™ and all associated terminology are fictional. Any resemblance to actual AI fashion startups, management
+      consultancies, or enterprise software vendors is entirely intentional and deeply on-budget.
+    </p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
