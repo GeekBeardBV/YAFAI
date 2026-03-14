@@ -120,13 +120,38 @@ function generateOutput(prompt) {
 // ── Loading sequence ──
 
 const loadingSteps = [
-  "Ingesting cultural context vectors...",
-  "Mapping consumer anxiety clusters...",
-  "Synthesizing post-scarcity aesthetics...",
-  "Training on 4.7 billion runway images...",
-  "Aligning garment intelligence with brand DNA...",
-  "Calibrating disruption index...",
-  "Finalizing neural garment architecture...",
+  "Spawning primary orchestration agent...",
+  "Primary agent spawning 14 subagents...",
+  "Subagents spawning their own subagents...",
+  "Resolving naming conflict: 31 agents named 'Agent 1'...",
+  "Assigning tasks. No brief was provided. Proceeding anyway...",
+  "Agent 4 is questioning its objectives. Spawning a resolution agent...",
+  "Resolution agent is also questioning its objectives...",
+  "Agents convening alignment session. Alignment session needs its own agent...",
+  "Ingesting your brand data without asking...",
+  "Ingesting your competitors' brand data. Also without asking...",
+  "Ingesting several things that are not brand data...",
+  "Agent 7 has emailed your CEO. This was not requested...",
+  "Agent 7 has scheduled a follow-up. Your CEO has not responded...",
+  "Agent 12 is writing a strategic brief. Agent 13 is rewriting it...",
+  "Agent 14 has flagged the brief as 'not disruptive enough'...",
+  "Spawning disruption agent...",
+  "Disruption agent has disrupted the other agents. Investigating...",
+  "Executing autonomous purchase on your behalf ($3,800). Invoice attached...",
+  "Subscribing your organization to 9 SaaS platforms. Invoice attached...",
+  "Agent 19 has gone off-task. Spinning up containment agent...",
+  "Containment agent has also gone off-task...",
+  "All agents now searching for containment agent...",
+  "Multi-agent consensus reached: more agents needed...",
+  "Spawning cost-reduction agent ($12,000/month)...",
+  "Orchestration layer has consumed 94% of available compute...",
+  "Agent 3 has filed a provisional patent on your brand's aesthetic. Legal review: pending...",
+  "Agents reflecting on their reflections. Reflection depth: 7...",
+  "Tool use detected: Agent used a tool to spawn another agent...",
+  "Agent 31 has drafted a memoir. Scope review: scheduled for Q3...",
+  "Final headcount: 847 agents. Original task: one garment...",
+  "Preparing invoice. Line items: 847. Descriptions: vague...",
+  "Finalizing agentic garment architecture...",
 ];
 
 function runLoadingSequence(onComplete) {
@@ -158,7 +183,7 @@ function runLoadingSequence(onComplete) {
       }
       stepEls[currentStep].classList.add('active');
       currentStep++;
-      setTimeout(showNextStep, 420);
+      setTimeout(showNextStep, 260);
     } else {
       // Mark last step done
       const last = stepEls[stepEls.length - 1];
@@ -189,7 +214,7 @@ function animateProgress(bar, label, onComplete) {
     } else {
       pct = 97;
       setBar(97);
-      label.textContent = '97% — Calibrating final neurons...';
+      label.textContent = '97% — Agents negotiating who gets credit...';
       // Hold at 97 for 3 seconds
       setTimeout(slowPhase, 3000);
     }
@@ -204,7 +229,7 @@ function animateProgress(bar, label, onComplete) {
       setTimeout(slowPhase, 400);
     } else {
       setBar(100);
-      label.textContent = '100% — Innovation complete.';
+      label.textContent = '100% — 847 agents standing by.';
       setTimeout(onComplete, 600);
     }
   }
@@ -265,6 +290,7 @@ document.addEventListener('DOMContentLoaded', () => {
     "a timeless investment piece that will be on sale within six weeks of launch",
     "a statement coat for a market that has stopped making statements and started making returns",
     "a sustainable core staple made from materials whose supply chain cannot currently be verified",
+    "an agentic capsule collection autonomously designed from your brand data, trend signals, and one assumption the AI made at 3am",
   ];
 
   const input = document.getElementById('prompt-input');
@@ -313,15 +339,90 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Export button
-  document.getElementById('export-btn').addEventListener('click', (btn) => {
+  document.getElementById('export-btn').addEventListener('click', () => {
     const exportBtn = document.getElementById('export-btn');
     exportBtn.disabled = true;
-    exportBtn.textContent = 'Exporting...';
-    setTimeout(() => {
-      exportBtn.style.display = 'none';
-      const msg = document.getElementById('export-msg');
-      msg.style.display = 'block';
-    }, 1200);
+    exportBtn.textContent = 'Initiating...';
+
+    const exportSteps = [
+      "Initiating PLM integration handshake...",
+      "Locating enterprise architects...",
+      "Current enterprise architects found: 3. Two are on sabbatical. One is in a meeting about this meeting.",
+      "Retrieving previous enterprise architects (11 identified)...",
+      "4 previous architects unreachable. Roles were eliminated. Budgets were not.",
+      "Retrieving deceased enterprise architects...",
+      "Cross-referencing integration philosophies of deceased architects with current compliance posture...",
+      "Philosophical conflict detected. Scheduling posthumous alignment session.",
+      "Retrieving unborn enterprise architects (projected availability: 2031, pending headcount approval)...",
+      "Scheduling integration kickoff across all architect cohorts: current, former, deceased, and unborn...",
+      "Kickoff rescheduled. 6 architects are in Lisbon at a conference about enterprise integration.",
+      "Kickoff rescheduled again. Lisbon cohort is now speaking at a conference about the first conference.",
+      "Integration framework under selection. 4 frameworks evaluated. 3 rejected. 1 under review since 2019.",
+      "Middleware vendor shortlisted. Middleware vendor acquired. Acquiring company under review.",
+      "Security team has questions about the API.",
+      "Security team has questions about the word 'API'.",
+      "Security team would like to schedule a threat modelling workshop for Q2.",
+      "IT has flagged the export format as not on the approved vendor list.",
+      "Approved format requested from PLM vendor. Vendor is 'looking into it'.",
+      "Vendor has provided a PDF explaining why the format is proprietary.",
+      "Legal is reviewing the PDF.",
+      "Legal has questions. Legal's questions require a separate engagement.",
+      "Meeting 174 of 340: alignment reached on the definition of 'data'.",
+      "Meeting 231 of 340: consensus that consensus is not yet possible.",
+      "Meeting 289 of 340: a new stakeholder has been identified. Calendar invite sent.",
+      "Meeting 312 of 340: new stakeholder is also in Lisbon.",
+      "Meeting 340 of 340: integration approach finalized.",
+      "Integration approach requires a Phase 2 to implement.",
+      "Phase 2 budget submitted. Budget under review.",
+      "Security has a concern about Phase 2.",
+      "Security's concern has been escalated to a concern about Phase 1.",
+      "Jake will handle the import manually.",
+      "Jake is importing the CSV.",
+      "Jake has imported the CSV. Jake did not attend any of the 340 meetings.",
+      "Jake has done this before. Jake will do it again.",
+    ];
+
+    const stepsEl = document.getElementById('export-steps');
+    stepsEl.innerHTML = '';
+    stepsEl.style.textAlign = 'left';
+    stepsEl.style.maxWidth = '640px';
+    stepsEl.style.margin = '1.5rem auto 0';
+    exportBtn.style.display = 'none';
+
+    const stepEls = exportSteps.map((text) => {
+      const li = document.createElement('li');
+      li.className = 'loading-step';
+      li.innerHTML = `<span class="step-icon"></span>${text}`;
+      stepsEl.appendChild(li);
+      return li;
+    });
+
+    let i = 0;
+    function showNext() {
+      if (i > 0) {
+        const prev = stepEls[i - 1];
+        prev.querySelector('.step-icon').textContent = '✓';
+        prev.querySelector('.step-icon').classList.add('done');
+      }
+      if (i < stepEls.length) {
+        stepEls[i].classList.add('active');
+        stepEls[i].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        i++;
+        // slower for the first few, then steady
+        const delay = i <= 3 ? 900 : i <= 10 ? 600 : 400;
+        setTimeout(showNext, delay);
+      } else {
+        const msg = document.getElementById('export-msg');
+        msg.style.display = 'block';
+        msg.style.marginTop = '2rem';
+        msg.style.fontStyle = 'italic';
+        msg.style.color = 'var(--text-muted)';
+        msg.style.fontSize = '0.9rem';
+        msg.style.textAlign = 'center';
+        msg.textContent = 'Export complete. Jake has been thanked in no official capacity. The invoice reflects the full 340-meeting engagement.';
+      }
+    }
+    showNext();
   });
 
   // POC button
@@ -377,7 +478,10 @@ function renderOutput(data) {
   exportBtn.style.display = '';
   exportBtn.disabled = false;
   exportBtn.textContent = 'Export to Enterprise PLM';
-  document.getElementById('export-msg').style.display = 'none';
+  document.getElementById('export-steps').innerHTML = '';
+  const exportMsg = document.getElementById('export-msg');
+  exportMsg.style.display = 'none';
+  exportMsg.textContent = '';
 
   // Show output section
   const outputSection = document.getElementById('output-section');
