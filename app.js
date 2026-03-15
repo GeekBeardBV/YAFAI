@@ -328,41 +328,21 @@ document.addEventListener('DOMContentLoaded', () => {
     exportBtn.textContent = 'Initiating...';
 
     const exportSteps = [
-      "Initiating PLM integration handshake...",
       "Locating enterprise architects...",
-      "Current enterprise architects found: 3. Two are on sabbatical. One is in a meeting about this meeting.",
-      "Retrieving previous enterprise architects (11 identified)...",
-      "4 previous architects unreachable. Roles were eliminated. Budgets were not.",
+      "3 enterprise architects found. 2 are on sabbatical. 1 is in a meeting about this meeting.",
+      "Retrieving previous enterprise architects (11 identified). 4 unreachable. Roles were eliminated. Budgets were not.",
       "Retrieving deceased enterprise architects...",
-      "Cross-referencing integration philosophies of deceased architects with current compliance posture...",
-      "Philosophical conflict detected. Scheduling posthumous alignment session.",
-      "Retrieving unborn enterprise architects (projected availability: 2031, pending headcount approval)...",
-      "Scheduling integration kickoff across all architect cohorts: current, former, deceased, and unborn...",
+      "Scheduling posthumous alignment session. Calendar invite sent to all cohorts: current, former, and deceased.",
       "Kickoff rescheduled. 6 architects are in Lisbon at a conference about enterprise integration.",
       "Kickoff rescheduled again. Lisbon cohort is now speaking at a conference about the first conference.",
       "Integration framework under selection. 4 frameworks evaluated. 3 rejected. 1 under review since 2019.",
-      "Middleware vendor shortlisted. Middleware vendor acquired. Acquiring company under review.",
       "Security team has questions about the API.",
       "Security team has questions about the word 'API'.",
-      "Security team would like to schedule a threat modelling workshop for Q2.",
-      "IT has flagged the export format as not on the approved vendor list.",
-      "Approved format requested from PLM vendor. Vendor is 'looking into it'.",
-      "Vendor has provided a PDF explaining why the format is proprietary.",
-      "Legal is reviewing the PDF.",
+      "Vendor has provided a PDF explaining why the format is proprietary. Legal is reviewing the PDF.",
       "Legal has questions. Legal's questions require a separate engagement.",
-      "Meeting 174 of 340: alignment reached on the definition of 'data'.",
-      "Meeting 231 of 340: consensus that consensus is not yet possible.",
-      "Meeting 289 of 340: a new stakeholder has been identified. Calendar invite sent.",
-      "Meeting 312 of 340: new stakeholder is also in Lisbon.",
-      "Meeting 340 of 340: integration approach finalized.",
-      "Integration approach requires a Phase 2 to implement.",
-      "Phase 2 budget submitted. Budget under review.",
-      "Security has a concern about Phase 2.",
-      "Security's concern has been escalated to a concern about Phase 1.",
+      "Meeting 340 of 340: integration approach finalized. Approach requires a Phase 2 to implement.",
       "Jake will handle the import manually.",
-      "Jake is importing the CSV.",
-      "Jake has imported the CSV. Jake did not attend any of the 340 meetings.",
-      "Jake has done this before. Jake will do it again.",
+      "Jake has imported the CSV. Jake did not attend any of the 340 meetings. Jake has done this before.",
     ];
 
     const stepsEl = document.getElementById('export-steps');
@@ -402,7 +382,7 @@ document.addEventListener('DOMContentLoaded', () => {
         msg.style.color = 'var(--text-muted)';
         msg.style.fontSize = '0.9rem';
         msg.style.textAlign = 'center';
-        msg.textContent = 'Export complete. Jake has been thanked in no official capacity. The invoice reflects the full 340-meeting engagement.';
+        msg.textContent = 'Export complete. Jake has been thanked in no official capacity. The invoice reflects the full 340-meeting engagement. Your development team has been replaced.';
       }
     }
     showNext();

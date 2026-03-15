@@ -115,6 +115,26 @@ section.full-bleed {
   pointer-events: none;
 }
 
+.hero-wordmark {
+  font-size: clamp(3rem, 10vw, 7rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.hero-wordmark-sub {
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
 .hero-eyebrow {
   font-size: 0.75rem;
   letter-spacing: 0.25em;
