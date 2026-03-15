@@ -25,6 +25,8 @@ const fabrics = [
   "AI-optimized bamboo microfiber",
   "self-healing nano-cotton",
   "carbon-negative synthwave jersey",
+  "upcycled narrative cotton (story verified, fibers not)",
+  "conflict-adjacent cashmere (conflict relocated upstream)",
 ];
 
 const garmentPrefixes = [
@@ -43,6 +45,9 @@ const garmentNames = [
   "Emergence Top",
   "Threshold Cardigan",
   "Velocity Shirt",
+  "Alignment Blazer",
+  "Stakeholder Hoodie",
+  "Pivot Jacket",
 ];
 
 const measurements = ["Optimal", "Disruptive", "Visionary", "Maximum", "Unprecedented", "Calibrated", "Precision"];
@@ -54,6 +59,9 @@ const colorways = [
   "Post-Ochre / Synthetic Sand",
   "Neural Gray / Absence Cream",
   "Error Red / Silence White",
+  "Greenwash Sage / Accountability Beige",
+  "Pivot Gray / Rebrand White",
+  "Surplus Taupe / Markdown Ecru",
 ];
 
 const stitchingDetails = [
@@ -274,6 +282,9 @@ document.addEventListener('DOMContentLoaded', () => {
     "a statement coat for a market that has stopped making statements and started making returns",
     "a sustainable core staple made from materials whose supply chain cannot currently be verified",
     "an agentic capsule collection autonomously designed from your brand data, trend signals, and one assumption the AI made at 3am",
+    "a responsible core essential made from materials whose provenance is described as 'complex'",
+    "an elevated basics collection for a brand that has pivoted to elevated basics three times since 2019",
+    "a hero piece for the hero product strategy that will be quietly archived before the hero piece ships",
   ];
 
   const input = document.getElementById('prompt-input');
