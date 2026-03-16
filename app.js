@@ -62,6 +62,8 @@ const colorways = [
   "Greenwash Sage / Accountability Beige",
   "Pivot Gray / Rebrand White",
   "Surplus Taupe / Markdown Ecru",
+  "Write-Down Beige / Sunk Cost Gray",
+  "Innovation Budget Black / Consulting Fee Ivory",
 ];
 
 const stitchingDetails = [
@@ -143,6 +145,9 @@ const loadingSteps = [
   "Agent 3 has filed a provisional patent on your brand's aesthetic. Legal review: pending...",
   "Final headcount: 847 agents. Original task: one garment...",
   "Finalizing agentic garment architecture...",
+  "Generating ROI projection. ROI projection is speculative. Steering committee has approved it anyway...",
+  "Calculating cost per garment. Cost per garment: $847,000. Flagged as 'acceptable for Phase 1'...",
+  "Innovation budget fully allocated. Zero garments in production. Requesting renewal budget...",
 ];
 
 function runLoadingSequence(onComplete) {
@@ -285,6 +290,9 @@ document.addEventListener('DOMContentLoaded', () => {
     "a responsible core essential made from materials whose provenance is described as 'complex'",
     "an elevated basics collection for a brand that has pivoted to elevated basics three times since 2019",
     "a hero piece for the hero product strategy that will be quietly archived before the hero piece ships",
+    "a collection justified by a €2.3M AI investment that cannot now be cancelled without a write-down",
+    "a sustainable line for a brand that spent more on the sustainability audit than on the actual sustainability",
+    "a capsule drop for a brand whose AI transformation budget exceeds its entire design team's combined salaries for four years",
   ];
 
   const input = document.getElementById('prompt-input');
